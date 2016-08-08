@@ -3,3 +3,11 @@
 Hello  {{name}}
 </div>
 <button (click)="changeSuitColor()">Change suit color</button>
+<input type="text" [(ngModel)]="radovanColor"/>
+
+<ul>
+  <li *ngFor="let customer of customers">
+      <span [style.color]="radovanColor" >{{customer.id}}</span>
+      <span>- {{customer.name}}</span>
+  </li>
+</ul>
